@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <!-- Contact Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div>
+                <div class="col-lg-8 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="bg-light rounded p-5">
+                        <p class="d-inline-block border rounded-pill py-1 px-4">Biz bilan bog'laning</p>
+                        
+                        <form method="post">
+                            {% csrf_token%}
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="name" placeholder="Ism Familiyangiz" name="name">
+                                        <label for="name">Ism Familiyangiz</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="name" placeholder="+998911234567" name="phone">
+                                        <label for="name">Telefon raqamingiz</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" id="email" placeholder="Emailingiz" name="email">
+                                        <label for="email">Email</label>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" placeholder="Xabaringizni kiriting " id="message" style="height: 100px" name="text"></textarea>
+                                        <label for="message">Xabar</label>
+                                    </div>
+                                </div>
+                                <div class="col-2" style="margin-left: auto">
+                                    <button class="btn btn-primary w-100 py-3" type="submit">Yuborish</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>                               
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+
+    {% endblock %}

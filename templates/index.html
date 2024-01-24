@@ -1,0 +1,177 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+
+
+
+<div class="row g-5">
+    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeIn;">
+        <div class="d-flex flex-column">
+            <img class="img-fluid rounded w-75 align-self-end" src="{% static 'img/about-1.jpg' %}" alt="">
+            <img class="img-fluid rounded w-50 bg-white pt-3 pe-3" src="{% static 'img/about-2.jpg' %}" alt="" style="margin-top: -25%;">
+        </div>
+    </div>
+    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeIn;">
+        <p class="d-inline-block border rounded-pill py-1 px-4">Biz haqimizda </p>
+        <h1 class="mb-4">Nega Bizga ishonishingiz kerak? Biz haqimizda bilib oling!</h1>
+        <p>Soliqqa ishonch: Bizning xodimlarimiz va xizmatlarimizga ishonchli bo'ling. Biz har bir tajribani hursandlik va sodiqlik bilan ta'minlashga intilamiz.</p>
+        <p class="mb-4">Texnologiyalardan foydalanish: Biz so'nggi texnologiyalardan foydalanish orqali shifoxona xizmatlarini yanada yaxshilashga harakat qilamiz. Bu, tibbiyotda yuqori sifatli xizmatni ta'minlash vaqtida tan olishda yordam beradi.</p>
+        <p><i class="far fa-check-circle text-primary me-3"></i>Sifatli sog'liqni saqlash</p>
+        <p><i class="far fa-check-circle text-primary me-3"></i>Faqat malakali shifokorlar</p>
+        <p><i class="far fa-check-circle text-primary me-3"></i>Tibbiy tadqiqot mutaxassislari</p>
+        
+    </div>
+</div>
+    <!-- Service Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <p class="d-inline-block border rounded-pill py-1 px-4">Xizmatlar</p>
+                <h1>Sog'liqni saqlash yechimlari</h1>
+            </div>
+            <div class="row g-4">
+                {% for servic in service %}
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item bg-light rounded h-100 p-5">
+                        <div class="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4" style="width: 65px; height: 65px;">
+                            <i class="fa fa-heartbeat text-primary fs-4"></i>
+                        </div>
+                        <h4 class="mb-3">{{servic.name}}</h4>
+                        <p class="mb-4">{{servic.about}}</p>
+                        
+                    </div>
+                    {% endfor %}
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+
+    <!-- Feature Start -->
+    <div class="container-fluid bg-primary overflow-hidden my-5 px-lg-0">
+        <div class="container feature px-lg-0">
+            <div class="row g-0 mx-lg-0">
+                <div class="col-lg-6 feature-text py-5 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="p-lg-5 ps-lg-0">
+                        <p class="d-inline-block border rounded-pill text-light py-1 px-4">Xususiyatlari</p>
+                        <h1 class="text-white mb-4">Nima uchun bizni tanlaysiz</h1>
+                        <p class="text-white mb-4 pb-2">Mijozlarga quloq solish: Biz har bir mijozni qadrlaymiz va ularning so'rovlari, takliflari yoki mulohazalari bo'yicha ehtirom bildiramiz. Sizning xohishingiz va fikringiz biz uchun muhimdir.</p>
+                        <div class="row g-4">
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-light" style="width: 55px; height: 55px;">
+                                        <i class="fa fa-user-md text-primary"></i>
+                                    </div>
+                                    <div class="ms-4">
+                                        <p class="text-white mb-2">Tajriba</p>
+                                        <h5 class="text-white mb-0">Shifokorlar</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-light" style="width: 55px; height: 55px;">
+                                        <i class="fa fa-check text-primary"></i>
+                                    </div>
+                                    <div class="ms-4">
+                                        <p class="text-white mb-2">Sifat</p>
+                                        <h5 class="text-white mb-0">Xizmatlar</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-light" style="width: 55px; height: 55px;">
+                                        <i class="fa fa-comment-medical text-primary"></i>
+                                    </div>
+                                    <div class="ms-4">
+                                        <p class="text-white mb-2">Ijobiy</p>
+                                        <h5 class="text-white mb-0">Konsultatsiya</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-light" style="width: 55px; height: 55px;">
+                                        <i class="fa fa-headphones text-primary"></i>
+                                    </div>
+                                    <div class="ms-4">
+                                        <p class="text-white mb-2">24 soat</p>
+                                        <h5 class="text-white mb-0">Qo'llab-quvvatlash</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 pe-lg-0 wow fadeIn" data-wow-delay="0.5s" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute img-fluid w-100 h-100" src="{% static 'img/feature.jpg' %}" style="object-fit: cover;" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Feature End -->
+
+
+    <!-- Team Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <p class="d-inline-block border rounded-pill py-1 px-4">Shifokorlar</p>
+                <h1>Bizning tajribali shifokorlarimiz</h1>
+            </div>
+            <div class="row g-4">
+                {% for doctor in doctors%}
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="team-item position-relative rounded overflow-hidden">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="{{ doctor.image.url }}" alt="">
+                        </div>
+                        <div class="team-text bg-light text-center p-4">
+                            <h5>{{doctor.name}}</h5>
+                            <p class="text-primary">{{doctor.department}}</p>
+                            
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
+
+
+
+
+
+    <!-- Testimonial Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <p class="d-inline-block border rounded-pill py-1 px-4">Fikrlar</p>
+                <h1>Bemorlarimiz nima deydi!</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+                {% for client in clients %}
+                <div class="testimonial-item text-center">
+                    <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" src="{{client.icon.url}}" style="width: 100px; height: 100px;">
+                    <div class="testimonial-text rounded text-center p-4">
+                        <p>{{client.message}}</p>
+                        <h5 class="mb-1">{{client.name}}</h5>
+                        <span class="fst-italic">{{client.profession}}</span>
+                    </div>
+                </div>
+               {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+{% endblock %}
